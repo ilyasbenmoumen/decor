@@ -5,12 +5,12 @@ const ORDERS_KEY = 'afrae_orders';
 const PRODUCTS_KEY = 'afrae_products';
 
 const DEFAULT_PRODUCTS = [
-  { id: '1', name: 'Vase Arabesque', price: 280, category: 'Vases', description: 'Un vase artisanal sculpté à la main en gypse pur.', image: '../assets/product-1.jpg', inStock: true, stock: 5 },
-  { id: '2', name: 'Bougeoir Floral', price: 195, category: 'Bougeoirs', description: 'Bougeoir en gypse aux formes florales délicates.', image: '../assets/product-2.jpg', inStock: true, stock: 8 },
-  { id: '3', name: 'Miroir Baroque', price: 450, category: 'Miroirs', description: 'Cadre de miroir baroque sculpté en gypse blanc.', image: '../assets/product-3.jpg', inStock: true, stock: 3 },
-  { id: '4', name: 'Plateau Géométrique', price: 320, category: 'Plateaux', description: 'Plateau décoratif en gypse aux motifs géométriques.', image: '../assets/product-4.jpg', inStock: true, stock: 6 },
-  { id: '5', name: 'Sculpture Murale', price: 580, category: 'Sculptures', description: 'Sculpture murale en relief, travail artisanal minutieux.', image: '../assets/product-1.jpg', inStock: true, stock: 2 },
-  { id: '6', name: 'Coupe Décorative', price: 240, category: 'Coupes', description: 'Coupe décorative en gypse blanc, aux lignes épurées.', image: '../assets/product-2.jpg', inStock: false, stock: 0 }
+  { id: '1', name: 'Vase Arabesque', price: 280, category: 'Vases', description: 'Un vase artisanal sculpté à la main en gypse pur.', image: '/assets/product-1.jpg', inStock: true, stock: 5 },
+  { id: '2', name: 'Bougeoir Floral', price: 195, category: 'Bougeoirs', description: 'Bougeoir en gypse aux formes florales délicates.', image: '/assets/product-2.jpg', inStock: true, stock: 8 },
+  { id: '3', name: 'Miroir Baroque', price: 450, category: 'Miroirs', description: 'Cadre de miroir baroque sculpté en gypse blanc.', image: '/assets/product-3.jpg', inStock: true, stock: 3 },
+  { id: '4', name: 'Plateau Géométrique', price: 320, category: 'Plateaux', description: 'Plateau décoratif en gypse aux motifs géométriques.', image: '/assets/product-4.jpg', inStock: true, stock: 6 },
+  { id: '5', name: 'Sculpture Murale', price: 580, category: 'Sculptures', description: 'Sculpture murale en relief, travail artisanal minutieux.', image: '/assets/product-1.jpg', inStock: true, stock: 2 },
+  { id: '6', name: 'Coupe Décorative', price: 240, category: 'Coupes', description: 'Coupe décorative en gypse blanc, aux lignes épurées.', image: '/assets/product-2.jpg', inStock: false, stock: 0 }
 ];
 
 // ===== AUTH =====
@@ -301,7 +301,7 @@ function renderProducts(el) {
           </div>
           <div class="form-group">
             <label>URL de l'image</label>
-            <input type="text" id="p-img" placeholder="../assets/product-1.jpg">
+            <input type="text" id="p-img" placeholder="/assets/product-1.jpg">
           </div>
           <div class="form-group">
             <label>Description</label>
@@ -366,7 +366,7 @@ function saveProduct() {
     price,
     stock: parseInt(document.getElementById('p-stock').value) || 0,
     category: document.getElementById('p-cat').value.trim() || 'Divers',
-    image: document.getElementById('p-img').value.trim() || '../assets/product-1.jpg',
+    image: document.getElementById('p-img').value.trim() || '/assets/product-1.jpg',
     description: document.getElementById('p-desc').value.trim(),
     inStock: document.getElementById('p-stock-check').checked,
   };

@@ -11,7 +11,7 @@ const DEFAULT_PRODUCTS = [
     price: 280,
     category: 'Vases',
     description: 'Un vase artisanal sculpté à la main en gypse pur, orné de motifs arabesques traditionnels. Chaque détail est réalisé avec une précision remarquable, faisant de cette pièce un objet d\'art unique.',
-    image: 'assets/product-1.jpg',
+    image: '/assets/product-1.jpg',
     inStock: true,
     stock: 5
   },
@@ -21,7 +21,7 @@ const DEFAULT_PRODUCTS = [
     price: 195,
     category: 'Bougeoirs',
     description: 'Bougeoir en gypse aux formes florales délicates. Idéal pour créer une atmosphère chaleureuse et raffinée dans votre intérieur. Dimensions : 12 cm de hauteur.',
-    image: 'assets/product-2.jpg',
+    image: '/assets/product-2.jpg',
     inStock: true,
     stock: 8
   },
@@ -31,7 +31,7 @@ const DEFAULT_PRODUCTS = [
     price: 450,
     category: 'Miroirs',
     description: 'Cadre de miroir baroque sculpté en gypse blanc. Un chef-d\'œuvre artisanal qui transforme n\'importe quel mur en une véritable œuvre d\'art. Dimensions : 60x80 cm.',
-    image: 'assets/product-3.jpg',
+    image: '/assets/product-3.jpg',
     inStock: true,
     stock: 3
   },
@@ -41,7 +41,7 @@ const DEFAULT_PRODUCTS = [
     price: 320,
     category: 'Plateaux',
     description: 'Plateau décoratif en gypse aux motifs géométriques inspirés de la tradition marocaine. Parfait pour présenter vos bijoux ou comme centre de table.',
-    image: 'assets/product-4.jpg',
+    image: '/assets/product-4.jpg',
     inStock: true,
     stock: 6
   },
@@ -51,7 +51,7 @@ const DEFAULT_PRODUCTS = [
     price: 580,
     category: 'Sculptures',
     description: 'Sculpture murale en relief, travail artisanal minutieux représentant des motifs floraux et géométriques. Pièce unique, faite à la main par nos artisans.',
-    image: 'assets/product-1.jpg',
+    image: '/assets/product-1.jpg',
     inStock: true,
     stock: 2
   },
@@ -61,7 +61,7 @@ const DEFAULT_PRODUCTS = [
     price: 240,
     category: 'Coupes',
     description: 'Coupe décorative en gypse blanc, aux lignes épurées et élégantes. Peut servir comme vide-poche ou simplement comme objet décoratif.',
-    image: 'assets/product-2.jpg',
+    image: '/assets/product-2.jpg',
     inStock: false,
     stock: 0
   }
@@ -248,7 +248,7 @@ function renderHome(main) {
   const products = getProducts().filter(p => p.inStock).slice(0, 4);
   main.innerHTML = `
     <section class="hero">
-      <img src="assets/hero-bg.jpg" alt="Afrae Décor" class="hero-bg">
+      <img src="/assets/hero-bg.jpg" alt="Afrae Décor" class="hero-bg">
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1>Afrae Décor</h1>
